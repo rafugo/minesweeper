@@ -14,7 +14,6 @@ num_bombs = int(input())
 g = Game(x, y, num_bombs)
 
 g.print_board()
-g.print_bombs()
 
 result = 0
 while result == 0:

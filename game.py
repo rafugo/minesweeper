@@ -105,12 +105,19 @@ class Game:
 
     # prints out the board
     def print_board(self):
-        to_print = ''
+        to_print = '.' + ('-'*(2*self.n-1)) + '.\n'
         for i in range(self.m):
+            to_print += '|'
             for j in range(self.n):
                 to_print += self.user_grid[i][j]
+                to_print += '|'
 
             to_print += '\n'
+
+            if i != self.m - 1:
+                to_print += '|' + ('-'*(2*self.n-1)) + '|\n'
+
+        to_print += '.' + ('_'*(2*self.n-1)) + '.\n'
 
         print(to_print)
 
